@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - FreshKicks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FreshKicks</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="booking-form">
+        <h2>Book Your Drop-Off</h2>
+        <p>Book online, bring your shoes, and get instant quote.</p>
+
+        <form onsubmit="showNotification(event)">
+            <label>Full Name</label>
+            <input type="text" placeholder="e.g. Kegow" required>
+
+            <label>Phone Number (For Collection Notification)</label>
+            <input type="tel" placeholder="e.g. 076 123 4567" required>
+
+            <label>Email Address</label>
+            <input type="email" placeholder="e.g. kegow@email.com" required>
+
+            <label>Shoe Type</label>
+            <select id="shoeType" onchange="updateQuote()">
+                <option value="80">Sneakers / Canvas - R80</option>
+                <option value="150">Leather / Suede - R150</option>
+                <option value="250">Full Restoration - R250</option>
+            </select>
+
+            <label>Number of Pairs</label>
+            <input type="number" id="pairs" value="1" min="1" max="10" oninput="updateQuote()">
+
+            <label>Drop-off Date</label>
+            <input type="date" required>
+
+            <label>Special Instructions</label>
+            <textarea rows="3" placeholder="Any stains or damage?"></textarea>
+
+            <div class="status-box">
+                <strong>Instant Quote: <span id="quote">R80</span></strong>
+                <p style="font-size: 0.9em; margin-top: 0.5em;">This is your estimated price. Final price confirmed at drop-off.</p>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%;">Confirm Booking & Get Quote</button>
+
+            <div id="successMsg" class="notification-success">
+                <strong>✅ Booking Confirmed!</strong><br>
+                You will receive an SMS notification on your phone when your shoes are ready for collection. Thank you!
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 FreshKicks Shoe Cleaning</p>
+    </footer>
+
+    <script>
+        function updateQuote() {
+            let price = document.getElementById('shoeType').value;
+            let pairs = document.getElementById('pairs').value;
+            let total = price * pairs;
+            document.getElementById('quote').innerText = 'R' + total;
+        }
+
+        function showNotification(event) {
+            event.preventDefault();
+            document.getElementById('successMsg').style.display = 'block';
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
+</body>
+</html>

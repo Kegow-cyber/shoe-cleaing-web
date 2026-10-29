@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry | FreshKicks</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<div class="logo">FreshKicks</div>
+<nav>
+<button class="hamburger">☰</button>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#services">Services</a></li>
+<li><a href="booking.html">Book Now</a></li>
+<li><a href="enquiry.html">Get Quote</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Get a Free Quote</h1>
+<form id="enquiryForm" style="max-width:500px;margin:20px auto;text-align:left;">
+<input type="text" placeholder="Your Name" required style="width:100%;padding:10px;margin:5px 0;">
+<input type="email" placeholder="Email" required style="width:100%;padding:10px;margin:5px 0;">
+<textarea placeholder="What shoes need cleaning?" required style="width:100%;padding:10px;margin:5px 0;"></textarea>
+<button type="submit" class="btn">Send Enquiry</button>
+</form>
+</section>
+
+<script src="js/main.js"></script>
+<script>
+document.getElementById('enquiryForm').addEventListener('submit', function(e){
+ e.preventDefault();
+ alert('Thanks! We will contact you soon.');
+});
+</script>
+</body>
+</html>

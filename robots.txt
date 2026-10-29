@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://labvmdnsz6x7wza2.southafricanorth.cloudapp.azure.com/sitemap.xml
