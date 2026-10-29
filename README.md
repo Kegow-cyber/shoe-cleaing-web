@@ -51,3 +51,23 @@ Tested on: Chrome, Edge, Firefox. Layout works on all screen sizes.
 ## How to Run
 1. Clone repository
 2. Open index.html in browser
+
+3. ## Part 3 Updates & Fixes from Part 2 Feedback
+
+### Changelog
+- Fixed CSS path from style.css to css/style.css (Part 2 feedback)
+- Added responsive hamburger menu with JavaScript (js/main.js)
+- Added enquiry.html with JavaScript form validation and thank you alert
+- Added contact.html with Google Maps embed and FAQ accordion
+- Added robots.txt and sitemap.xml for SEO (Section 3.5)
+- Improved typography, color, and hover states for interactive elements
+- Tested on desktop (1920px), tablet (768px), mobile (480px)
+
+### GitHub Workflow
+- Used Git for version control with meaningful commits
+- Deployed via Azure Lab VM (labvmdnsz6x7wza2.southafricanorth.cloudapp.azure.com)
+
+### References
+- Google Maps Embed API
+- MDN Web Docs for responsive design
+- W3Schools for forms and validation
